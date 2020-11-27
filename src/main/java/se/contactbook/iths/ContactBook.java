@@ -3,8 +3,8 @@ package se.contactbook.iths;
 import java.util.ArrayList;
 
 public class ContactBook {
-    private String myContactBook;
-    private ArrayList<Contact> ContactBook = new ArrayList<>();
+    public String myContactBook;
+    public ArrayList<Contact> ContactBook = new ArrayList<>();
 
     public ContactBook(String myContactBook) {
         this.myContactBook = myContactBook;
@@ -17,7 +17,11 @@ public class ContactBook {
         System.out.println("Contacts in list: ");
         int noOfContacts = ContactBook.size();
         for (int i = 0; i < noOfContacts; i++) {
-            System.out.println(ContactBook.get(i).getContact());
+            System.out.println((i+1) + "." +
+                    ContactBook.get(i).getFullName() + " | " +
+                    ContactBook.get(i).getPhoneNumber() + " | " +
+                    ContactBook.get(i).getEmail() + " | " +
+                    ContactBook.get(i).getAddress());
         }
     }
 
@@ -35,12 +39,12 @@ public class ContactBook {
         return -1;
     }
     //Lägger till ny contact, .contains kollar om objectet redan finns i listan.
-    public boolean addContactBook(Contact contact) {
-        if (ContactBook.contains(Contact)) {
+    public boolean addContactBook(Contact contactInfo) {
+        if (ContactBook.contains(contactInfo)) {
             System.out.println("The contact is already on the list.");
             return false;
         }
-        ContactBook.add(contact);
+        ContactBook.add(contactInfo);
         return true;
     }
     //Tar bort Contact. .contains kollar om den finns, .remove tar bort den.

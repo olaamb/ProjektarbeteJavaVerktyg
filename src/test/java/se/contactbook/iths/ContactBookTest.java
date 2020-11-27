@@ -1,15 +1,15 @@
 package se.contactbook.iths;
 
 import java.util.ArrayList;
-
+import static java.util.Arrays.asList;
 
 public class ContactBookTest {
 
-    ContactTest contact1 = new ContactTest("Algot Algotsson", "0707-111111", "bjarne@email.com");
-    ContactTest contact2 = new ContactTest("Bjarne Bjarnesson", "0707-222222", "algot@email.com");
-    ContactTest contact3 = new ContactTest("Carl Carlsson", "0707-333333", "carl@email.com");
+    Contact contact1 = new Contact("Algot Algotsson", "0707-111111", "bjarne@email.com", "Gatan 1");
+    Contact contact2 = new Contact("Bjarne Bjarnesson", "0707-222222", "algot@email.com", "Gatan 2");
+    Contact contact3 = new Contact("Carl Carlsson", "0707-333333", "carl@email.com", "Gatan 3");
 
-    ArrayList<ContactTest> ContactBook = new ArrayList<>();
+    ArrayList<Contact> ContactBook = new ArrayList<>();
     
 @Test
     void testShowContactBook() {
@@ -17,6 +17,14 @@ public class ContactBookTest {
         ContactBook.add(contact2);
         ContactBook.add(contact3);
 
+    System.out.println("Contacts in list: ");
+    int noOfContacts = ContactBook.size();
+    for (int i = 0; i < noOfContacts; i++) {
+        System.out.println((i+1) + "." +
+            ContactBook.get(i).getFullName() + " | " +
+            ContactBook.get(i).getPhoneNumber() + " | " +
+            ContactBook.get(i).getEmail() + " | " +
+            ContactBook.get(i).getAddress());
 
 
     }
