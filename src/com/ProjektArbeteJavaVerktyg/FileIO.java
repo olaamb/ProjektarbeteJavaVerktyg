@@ -53,9 +53,9 @@ public class FileIO {
 
         public static void write() throws IOException {
 
-            FileOutputStream fileOut = new FileOutputStream("SavedLists/" + fileName);
+                FileOutputStream fileOut = new FileOutputStream("SavedLists/" + fileName);
 
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+                ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
 
                 objectOut.writeObject(ContactBook.ContactBook);
 

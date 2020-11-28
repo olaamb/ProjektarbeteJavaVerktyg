@@ -47,7 +47,7 @@ public class Main {
                     FileIO.fileOptions();
                     break;
 
-                case 7:
+                case 6:
                     System.out.println("Shutting down...");
                     quit = true;
                     break;
