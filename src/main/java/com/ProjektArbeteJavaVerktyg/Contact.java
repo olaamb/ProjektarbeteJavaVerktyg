@@ -12,7 +12,7 @@ public class Contact
     private String Address;
 
 
-    public Contact(String Fullname, String Email, String PhoneNumber, String Address) {
+    public Contact(String FullName, String Email, String PhoneNumber, String Address) {
 
         this.FullName;
         this.Email;
