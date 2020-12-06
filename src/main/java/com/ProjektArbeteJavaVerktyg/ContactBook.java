@@ -8,7 +8,7 @@ public class ContactBook {
     public static ArrayList<Contact> ContactBook = new ArrayList<>();
 
     public ContactBook() {
-        ContactBook = new ArrayList<Contact>();
+        ContactBook = new ArrayList<>();
     }
 
     //Loopar igenom arrayen. getContact skriver ut titlarna som finns i.
@@ -37,6 +37,7 @@ public class ContactBook {
         }
         return -1;
     }
+
     //  Lägger till ny contact, .contains kollar om objectet redan finns i listan.
 
     public boolean addContactBook(Contact contact) {
@@ -49,7 +50,6 @@ public class ContactBook {
         return true;
     }
     //  Tar bort Contact. .contains kollar om den finns, .remove tar bort den.
-
         public boolean removeContactBook(Contact removeContact) {
         if (ContactBook.contains(removeContact)) {
             ContactBook.remove(removeContact);
@@ -57,11 +57,10 @@ public class ContactBook {
             return true;
 
         } else {
-
             return false;
         }
-
     }
+
     public Contact queryContact(String name) {
         int position = findContact(name);
         if(position >= 0) {
@@ -79,8 +78,7 @@ public class ContactBook {
         }
         return -1;
     }
-
-    private int findMovie(Contact contact) {
-        return ContactBook.indexOf(contact);
+        private int findMovie(Contact contact) {
+            return ContactBook.indexOf(contact);
     }
 }
