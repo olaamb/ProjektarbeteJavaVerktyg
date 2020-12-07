@@ -23,13 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3c2e7f3-260a-44e5-a1f1-502f5b53a69d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/contactbook/iths/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/contactbook/iths/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/contactbook/iths/ContactBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/contactbook/iths/ContactBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/se/contactbook/iths/ContactBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/contactbook/iths/ContactBookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/contactbook/iths/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/contactbook/iths/ContactTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +81,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,6 +121,7 @@
       <workItem from="1607329533388" duration="282000" />
       <workItem from="1607329948576" duration="1182000" />
       <workItem from="1607331379586" duration="142000" />
+      <workItem from="1607343595014" duration="913000" />
     </task>
     <servers />
   </component>
@@ -158,22 +157,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606903781874" />
-    <state width="1237" height="153" key="GridCell.Tab.0.bottom" timestamp="1607331522297">
+    <state width="1237" height="238" key="GridCell.Tab.0.bottom" timestamp="1607344333213">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607331522297" />
-    <state width="1237" height="153" key="GridCell.Tab.0.center" timestamp="1607331522297">
+    <state width="1237" height="238" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
+    <state width="1237" height="238" key="GridCell.Tab.0.center" timestamp="1607344333213">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607331522297" />
-    <state width="1237" height="153" key="GridCell.Tab.0.left" timestamp="1607331522297">
+    <state width="1237" height="238" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
+    <state width="1237" height="238" key="GridCell.Tab.0.left" timestamp="1607344333213">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607331522297" />
-    <state width="1237" height="153" key="GridCell.Tab.0.right" timestamp="1607331522297">
+    <state width="1237" height="238" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
+    <state width="1237" height="238" key="GridCell.Tab.0.right" timestamp="1607344333213">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607331522297" />
+    <state width="1237" height="238" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1606471921947">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

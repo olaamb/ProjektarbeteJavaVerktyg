@@ -62,6 +62,24 @@ public class ContactBookTest {
         assertEquals(contact3, ContactBook.get(2));
     }
 
+    @Test
+    public void testQueryContactSearch() {
+        ContactBook.add(contact1);
+        String nameTest = "Algot Algotsson";
+        Assert.assertTrue(contact1.getFullName().equals(nameTest));
+    }
+    // Looper igenom arraylistan och kollar varje FullName om den stämmer överens med stringen.
+    // Utskriften som görs i metoden är borttagen i testet
+    private void searchContact() {
+        String testcontactName = "Algot Algotsson";
+        ContactBook.add(contact1);
+        for (Contact contact : ContactBook) {
+            if (contact1.getFullName().equals(testcontactName)) {
+                Assert.assertTrue(contact1.getFullName().equals("Algot Algotsson"));
+            }
+        }
+    }
+
     //Skapar en ny kontakt och testar om denna kontakten är riktig kontakt, med rätt variabler samt finns i arraylistan.
     @Test
     public void testAddContactBook() {

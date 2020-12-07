@@ -27,6 +27,26 @@ public class ContactBook {
         }
         return null;
     }
+
+    // metoden kallas i main klassen, och den kallar sen på searchContact nedanför.
+    public void queryContactSearch(String name) {
+        searchContact(name);
+    }
+    // metoden looper igenom arraylistan och kollar varje FullName om den stämmer överens med stringen.
+    // Skriver ut all information om namnet stämmer
+    private void searchContact(String contactName) {
+        for (Contact contact : ContactBook) {
+            if (contact.getFullName().equals(contactName)) {
+                System.out.println("Contact Found!\nFull Name: " + contact.getFullName() + " Email: " +
+                        contact.getEmail() + " Phone-Number: " + contact.getPhoneNumber()
+                        + " Address: " + contact.getAddress());
+            } else {
+                System.out.println("Could not find " + contactName +
+                        " in the contactbook.");
+            }
+            return;
+        }
+    }
 //kollar om en contact finns i arraylistan. Loopar igenom listan o kollar om den hittar match
 // och returnerar indexpositionen.
 //Skapar ett objekt och kollar om ett likadant object finns.
