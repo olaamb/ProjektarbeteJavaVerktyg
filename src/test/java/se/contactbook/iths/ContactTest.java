@@ -1,33 +1,33 @@
 package se.contactbook.iths;
 //
 
-public class Contact {
-        private String fullName;
-        private String email;
-        private String phoneNumber;
-        private String address;
+class Contact {
+        private String FullName;
+        private String Email;
+        private String PhoneNumber;
+        private String Address;
 
 
         public Contact(String fullname, String email, String phoneNumber, String address) {
-                this.fullName = fullname;
-                this.email = email;
-                this.phoneNumber = phoneNumber;
-                this.address = address;
+                this.FullName = fullname;
+                this.Email = email;
+                this.PhoneNumber = phoneNumber;
+                this.Address = address;
         }
 
         public String getFullName() {
-                return fullName;
+                return FullName;
         }
 
         public String getEmail() {
-                return email;
+                return Email;
         }
 
         public String getPhoneNumber() {
-                return phoneNumber;
+                return PhoneNumber;
         }
 
         public String getAddress() {
-                return address;
+                return Address;
         }
 }
