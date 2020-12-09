@@ -68,12 +68,15 @@ public class ContactBookTest {
         String nameTest = "Algot Algotsson";
         Assert.assertTrue(contact1.getFullName().equals(nameTest));
     }
+
     // Looper igenom arraylistan och kollar varje FullName om den stämmer överens med stringen.
     // Utskriften som görs i metoden är borttagen i testet
     private void searchContact() {
         String testcontactName = "Algot Algotsson";
+        ContactBook.add(contact3);
+        ContactBook.add(contact2);
         ContactBook.add(contact1);
-        for (Contact contact : ContactBook) {
+        for (for(int i = 0; i < ContactBook.size(); i++)) {
             if (contact1.getFullName().equals(testcontactName)) {
                 Assert.assertTrue(contact1.getFullName().equals("Algot Algotsson"));
             }

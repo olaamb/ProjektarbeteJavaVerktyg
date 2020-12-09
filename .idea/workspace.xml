@@ -81,19 +81,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Android JUnit.ContactBookTest" />
@@ -121,7 +108,10 @@
       <workItem from="1607329533388" duration="282000" />
       <workItem from="1607329948576" duration="1182000" />
       <workItem from="1607331379586" duration="142000" />
-      <workItem from="1607343595014" duration="913000" />
+      <workItem from="1607343595014" duration="1289000" />
+      <workItem from="1607347248653" duration="256000" />
+      <workItem from="1607347616146" duration="73000" />
+      <workItem from="1607499468192" duration="355000" />
     </task>
     <servers />
   </component>
@@ -157,22 +147,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606903781874" />
-    <state width="1237" height="238" key="GridCell.Tab.0.bottom" timestamp="1607344333213">
+    <state width="1237" height="238" key="GridCell.Tab.0.bottom" timestamp="1607344890170">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="238" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
-    <state width="1237" height="238" key="GridCell.Tab.0.center" timestamp="1607344333213">
+    <state width="1237" height="238" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607344890170" />
+    <state width="1237" height="238" key="GridCell.Tab.0.center" timestamp="1607344890170">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="238" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
-    <state width="1237" height="238" key="GridCell.Tab.0.left" timestamp="1607344333213">
+    <state width="1237" height="238" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607344890170" />
+    <state width="1237" height="238" key="GridCell.Tab.0.left" timestamp="1607344890170">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="238" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
-    <state width="1237" height="238" key="GridCell.Tab.0.right" timestamp="1607344333213">
+    <state width="1237" height="238" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607344890170" />
+    <state width="1237" height="238" key="GridCell.Tab.0.right" timestamp="1607344890170">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="238" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607344333213" />
+    <state width="1237" height="238" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607344890170" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1606471921947">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

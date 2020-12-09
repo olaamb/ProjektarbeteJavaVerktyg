@@ -35,7 +35,7 @@ public class ContactBook {
     // metoden looper igenom arraylistan och kollar varje FullName om den stämmer överens med stringen.
     // Skriver ut all information om namnet stämmer
     private void searchContact(String contactName) {
-        for (Contact contact : ContactBook) {
+        for (int i = 0; i < ContactBook.size(); i++) {
             if (contact.getFullName().equals(contactName)) {
                 System.out.println("Contact Found!\nFull Name: " + contact.getFullName() + " Email: " +
                         contact.getEmail() + " Phone-Number: " + contact.getPhoneNumber()
