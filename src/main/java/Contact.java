@@ -1,4 +1,4 @@
-package com.ProjektArbeteJavaVerktyg;
+package com.contact.iths;
 
 import java.io.Serializable;
 
