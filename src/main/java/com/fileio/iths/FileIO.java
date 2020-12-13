@@ -133,24 +133,28 @@ public class FileIO {
                     "3 - Load existing file\n" +
                     "4 - Back to menu without changes)");
 
-            int options = fileScanner.nextInt();
+            String options = fileScanner.nextLine();
             fileScanner.nextLine();
 
             switch(options) {
 
-                case 1:
+                case "1":
                     write();
                     break;
 
-                case 2:
+                case "2":
                     save();
                     break;
 
-                case 3:
+                case "3":
                     load();
                     break;
 
-                case 4:
+                case "4":
+                    break;
+
+                default:
+                    System.out.println("Invalid Input");
                     break;
         }
     }
