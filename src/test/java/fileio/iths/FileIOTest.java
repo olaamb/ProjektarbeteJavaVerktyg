@@ -1,11 +1,13 @@
-package com.ProjektArbeteJavaVerktyg;
+package fileio.iths;
 
+import com.contactbook.iths.Contact;
 import org.codehaus.plexus.util.FileUtils;
 import org.junit.jupiter.api.*;
 import java.io.Serializable;
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.*;
 import java.util.ArrayList;
+
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
@@ -60,30 +62,30 @@ class FileIOTest implements Serializable{
 
         System.out.println("Added test contact info:");
         System.out.println ("\nEmail: "+(TestContactBook.get(0).getEmail() +
-                            "\nName: "+TestContactBook.get(0).getFullName() +
-                            "\nPhone: "+TestContactBook.get(0).getPhoneNumber() +
-                            "\nAdress: "+TestContactBook.get(0).getAddress()));
+                "\nName: "+TestContactBook.get(0).getFullName() +
+                "\nPhone: "+TestContactBook.get(0).getPhoneNumber() +
+                "\nAdress: "+TestContactBook.get(0).getAddress()));
 
         TestContactBook.add(TempContact_R);
         System.out.println("\nAdded test contact with random char:");
         System.out.println ("\nEmail: "+ (TestContactBook.get(1).getEmail() +
-                            "\nName: "+ TestContactBook.get(1).getFullName() +
-                            "\nPhone: "+ TestContactBook.get(1).getPhoneNumber() +
-                            "\nAdress: "+ TestContactBook.get(1).getAddress()));
+                "\nName: "+ TestContactBook.get(1).getFullName() +
+                "\nPhone: "+ TestContactBook.get(1).getPhoneNumber() +
+                "\nAdress: "+ TestContactBook.get(1).getAddress()));
 
         ActualFile = "" + randomChar;
 
         FileOutputStream fileOut_A = new FileOutputStream("TestData/" + ExpectedFile);
 
-            ObjectOutputStream objectOutExpected = new ObjectOutputStream(fileOut_A);
-            objectOutExpected.writeObject(TestContactBook);
-            objectOutExpected.close();
+        ObjectOutputStream objectOutExpected = new ObjectOutputStream(fileOut_A);
+        objectOutExpected.writeObject(TestContactBook);
+        objectOutExpected.close();
 
         FileOutputStream fileOut_B = new FileOutputStream("TestData/" + ActualFile);
 
-            ObjectOutputStream objectOutActual = new ObjectOutputStream(fileOut_B);
-            objectOutActual.writeObject(TestContactBook);
-            objectOutActual.close();
+        ObjectOutputStream objectOutActual = new ObjectOutputStream(fileOut_B);
+        objectOutActual.writeObject(TestContactBook);
+        objectOutActual.close();
 
         System.out.println("\nContact List file generated: "+ ExpectedFile);
         System.out.println("\nContact List file"+ ActualFile);
@@ -108,34 +110,34 @@ class FileIOTest implements Serializable{
 
         ObjectInputStream objectIn = new ObjectInputStream(fileIn);
 
-            // Kollar första kontakten i arraylistan. Stämmer den i filen och den i minnet överens?
+        // Kollar första kontakten i arraylistan. Stämmer den i filen och den i minnet överens?
 
-            TestContactBook = (ArrayList <Contact>)objectIn.readObject();
+        TestContactBook = (ArrayList <Contact>)objectIn.readObject();
 
-            assertEquals(TestContactBook.get(0).getEmail(), Temp.get(0).getEmail());
+        assertEquals(TestContactBook.get(0).getEmail(), Temp.get(0).getEmail());
 
-            assertEquals(TestContactBook.get(0).getAddress(), Temp.get(0).getAddress());
+        assertEquals(TestContactBook.get(0).getAddress(), Temp.get(0).getAddress());
 
-            assertEquals(TestContactBook.get(0).getFullName(), Temp.get(0).getFullName());
+        assertEquals(TestContactBook.get(0).getFullName(), Temp.get(0).getFullName());
 
-            assertEquals(TestContactBook.get(0).getPhoneNumber(), Temp.get(0).getPhoneNumber());
+        assertEquals(TestContactBook.get(0).getPhoneNumber(), Temp.get(0).getPhoneNumber());
 
-            // Kollar andra kontakten i arraylistan. Stämmer den i filen och den i minnet överens?
+        // Kollar andra kontakten i arraylistan. Stämmer den i filen och den i minnet överens?
 
-            assertEquals(TestContactBook.get(1).getEmail(), Temp.get(1).getEmail());
+        assertEquals(TestContactBook.get(1).getEmail(), Temp.get(1).getEmail());
 
-            assertEquals(TestContactBook.get(1).getAddress(), Temp.get(1).getAddress());
+        assertEquals(TestContactBook.get(1).getAddress(), Temp.get(1).getAddress());
 
-            assertEquals(TestContactBook.get(1).getFullName(), Temp.get(1).getFullName());
+        assertEquals(TestContactBook.get(1).getFullName(), Temp.get(1).getFullName());
 
-            assertEquals(TestContactBook.get(1).getPhoneNumber(), Temp.get(1).getPhoneNumber());
+        assertEquals(TestContactBook.get(1).getPhoneNumber(), Temp.get(1).getPhoneNumber());
 
 
-            //Jämför två likadana filer med olika namn , då vet vi att den skriver rätt och konsekvent.
+        //Jämför två likadana filer med olika namn , då vet vi att den skriver rätt och konsekvent.
 
-            assertEquals(FileUtils.fileRead("TestData/" + ExpectedFile, "utf-8"),
+        assertEquals(FileUtils.fileRead("TestData/" + ExpectedFile, "utf-8"),
 
-            (FileUtils.fileRead("TestData/" + ActualFile, "utf-8")));
+                (FileUtils.fileRead("TestData/" + ActualFile, "utf-8")));
 
     }
 
@@ -173,7 +175,7 @@ class FileIOTest implements Serializable{
 
         assertEquals(FileUtils.fileRead("TestData/" + "TestSaveFunction", "utf-8"),
 
-        (FileUtils.fileRead("TestData/" + ActualFile, "utf-8")));
+                (FileUtils.fileRead("TestData/" + ActualFile, "utf-8")));
 
     }
 
