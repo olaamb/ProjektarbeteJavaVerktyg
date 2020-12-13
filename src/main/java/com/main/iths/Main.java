@@ -5,16 +5,24 @@ import com.fileio.iths.FileIO;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 public class Main {
+    // Skapar  scanner  för att mata in data
+    // Skapar instans av ContactBook så det går använda dens metoder i main-klassen
     private static final Scanner scan = new Scanner(System.in);
     private static final ContactBook contactBook = new ContactBook();
+    
     public static void main(String[] args) throws IOException, ClassNotFoundException {
+        
         boolean quit = false;
         startProgram();
         while (!quit) {
+            
             FileIO.messages_Title();
             printMenu();
             System.out.println("Press 4 to show this menu  again.");
+            
+            // switch-sats som tar hand om inmatning av data och visar menyn
             String option = scan.nextLine();
             switch (option) {
                 case "0":
@@ -69,7 +77,10 @@ public class Main {
         String contactNumber = scan.nextLine();
         System.out.println("Write the full address");
         String contactAddress = scan.nextLine();
+        
         Contact contactInfo = new Contact(contactName, contactEmail, contactNumber, contactAddress);
+        // Kallar efter addContactBook i ContactBook-klassen och skickar in contactInfo
+        // metoden avgör sen om det redan finns ett identitisk kontakt, om inte så läggs den in som ny kontakt.
         if (contactBook.addContactBook(contactInfo)) {
             System.out.println("A new contact has been added!");
         } else {
@@ -80,16 +91,22 @@ public class Main {
         System.out.println("Write the full name of the contact you'd like to remove");
         String contactRemoval = scan.nextLine();
         Contact removeContact = contactBook.queryContact(contactRemoval);
+        
+        // kallar efter removeContactBook i ContactBook-klassen och skickar med removeContact
+        // metoden avgör om det finns en kontakt med identisk namn med contains, om den gör det så tas den bort mha remove
         if (contactBook.removeContactBook(removeContact)) {
             System.out.println("The contact " + contactRemoval + " has been removed!");
         } else {
             System.out.println("Couldn't remove the contact");
         }
     }
-    // d
+    
     public static void findExistingContact() {
         System.out.println("Write the full name of the contact you'd like to find.");
         String contactName = scan.nextLine();
+        // kallar efter searchContact i ContactBook-klassen och skickar med contactName strängen
+        // metoden looper igenom hela arraylistan och kollar om ett identisk namn finns. 
+        // Hittar den det så skrivs hela kontakten ut med relevant information
         contactBook.searchContact(contactName);
     }
 }
