@@ -9,7 +9,7 @@ public class Contact implements Serializable {
     private final String PhoneNumber;
     private final String Address;
 
-
+       //Konstruktorn
     public Contact(String FullName, String Email, String PhoneNumber, String Address) {
 
         this.FullName = FullName;
