@@ -1,4 +1,4 @@
-package com.ProjektArbeteJavaVerktyg;
+package com.contactbook.iths;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
