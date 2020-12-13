@@ -76,7 +76,8 @@ public class ContactBookTest {
         ContactBook.add(contact3);
         ContactBook.add(contact2);
         ContactBook.add(contact1);
-        for(int i = 0; i < ContactBook.size(); i++) {
+
+        for(int i = 0;  i < ContactBook.size(); i++) {
             if (contact1.getFullName().equals(testcontactName)) {
                 Assert.assertTrue(contact1.getFullName().equals("Algot Algotsson"));
             }
