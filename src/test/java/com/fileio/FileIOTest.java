@@ -1,4 +1,4 @@
-package fileio.iths;
+package com.fileio;
 
 import com.contactbook.iths.Contact;
 import org.codehaus.plexus.util.FileUtils;
