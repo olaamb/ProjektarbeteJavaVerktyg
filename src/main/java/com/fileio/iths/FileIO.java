@@ -9,14 +9,16 @@ import com.contactbook.iths.Contact;
 import com.contactbook.iths.ContactBook;
 
 public class FileIO {
-
+   
         private static final Scanner fileScanner = new Scanner(System.in);
 
+        //Denna strängen är den som styr vilka filer som sparas eller laddas.
+        
         private static String fileName;
 
 
     //Sparar en lista med ett namn från scanner.
-    //
+    //Den gör det genom write-metoden som finns längre ned. Skillnaden är bara att den ändrar den statiska stringen fileName.
     public static void save() throws IOException {
 
             System.out.println("Choose a filename for your ContactList!");
@@ -25,7 +27,7 @@ public class FileIO {
         }
 
         //Metod som körs vid start för att kolla att mappen för sparade listor finns.
-        //Skapar mappen om inte.
+        //Skapar mappen om så inte är fallet.
 
     public static void checkDataFiles()  {
 
@@ -33,6 +35,11 @@ public class FileIO {
         if (!directory.exists()) { directory.mkdir(); }
     }
 
+    //Load-metoden, denna metoden läser innehållet i mappen SavedLists.
+    //Detta gör den genom files.Walk-utilityn. Innehållet skrivs ut i en sträng.
+    //Varje filnamn skrivs ut på ny genom "result.forEach"-delen.
+    //Själv laddningen görs av read()-metoden som finns längre ned. Här ändrar man dock filnamn, så att man pekar read() åt rätt håll.
+        
     public static void load() throws IOException, ClassNotFoundException {
 
     clearMenu();
@@ -52,6 +59,12 @@ public class FileIO {
                     clearMenu();
 
                     }
+        
+        //write är tillsammans med read ryggraden i klassen. Denna metoden gör själva skrivandet till en fil.
+        //FileOutputStream sköter själva filskrivningen. ObjectOutputStream är det som lämnar över information till ovanstående.
+        //Hela arraylistan "ContactList" skrivs in i innehållet i råformat. Det blir alltså ingen snygg textfil av filen.
+        //objectOut-close "avslutar" filskrivningen.
+        //Här finns också try/catch metoder som ska hålla felen i styr.
 
     public static void write()   {
 
@@ -72,6 +85,10 @@ public class FileIO {
         }
     }
 
+     //read() är filläsningen. Den är som ovanstående metod fast i princip omvänd. Istället för output, så är det input.
+     //Innehållet i filen skriver över ContactLists stora Arraylista.
+     //Även här finns catch/try för att hålla felen så få som möjligt.
+        
     static void read() throws  ClassNotFoundException {
 
         FileInputStream fileIn;
@@ -101,6 +118,8 @@ public class FileIO {
             }
         }
 
+        //Metod som målar 20 svarta rader. Det blir svårt att få översikt över den här funktionen om skärmen inte rensas först.
+        
         public static void clearMenu() {
             for (int i = 0; i < 20; ++i) System.out.println();
         }
@@ -117,6 +136,9 @@ public class FileIO {
 
 
         //Sub-meny för hela filsystemet. Kallar på metoderna ovan.
+        //Här ligger en if/else-sats som håller koll på om det finns någon sparad fil för arraylistan.
+        //Det är också snyggare än att det står "Filename = null" i användargränssnittet
+        
         public static void fileOptions() throws IOException, ClassNotFoundException {
 
             if (fileName == null) {
